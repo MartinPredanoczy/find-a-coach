@@ -13,28 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*
- pre pripad implementacie autentifikacie
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
-
-*/
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes for Vue.js 3 integration
-|--------------------------------------------------------------------------
-|
-| routy pre vyuzitie Vue v Laravel aplikacii
-|
-*/
-
-Route::view('/', 'dashboard')->name('dashboard');
+Route::view('/', 'index')->name('home');

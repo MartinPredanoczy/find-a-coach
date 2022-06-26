@@ -31,6 +31,7 @@ class CoachController extends Controller
     public function store(Request $request)
     {
         $coach = Coach::create($request->validated());
+
         return new CoachResource($coach);
     }
 
@@ -55,6 +56,7 @@ class CoachController extends Controller
     public function update(CoachRequest $request, Coach $coach)
     {
         $coach->update($request->validated());
+
         return new CoachResource($coach);
     }
 
